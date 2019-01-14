@@ -1,0 +1,28 @@
+var num1 = 1
+var num2 = 7
+
+//num1和num2进行一次交换
+//空间换时间
+var temp;
+temp = num1;
+num1 = num2;
+num2 = temp;
+
+
+//时间换空间
+num1 = num1 - num2; //num1:-6  num2:7
+num2 = num2 + num1; //num1:-6  num2:1
+
+document.querySelector("#")
+var demo = $("#demo");
+$("#demo").css()
+$("#demo").show()
+
+//时间效率
+for(){
+    for(){
+
+    }
+}
+n * n
+n

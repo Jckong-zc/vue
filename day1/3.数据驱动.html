@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        
+    <!-- id="demo" Vue的作用域  影响势力范围 -->
+    <div id="demo">
+        <p>{{name}}</p>
+        <div>{{num}}</div>
+        <!-- <div>{{num}}</div> -->
+        <!-- <style>{{css}}</style>
+        <script>{{js}}</script> -->
+    </div>
+    <!-- 把{{name}}替换为 lemon -->
+    <!-- 把{{num}}替换为 1 -->
+    <script src="../js/vue.js"></script>
+    <script>
+        // 数据驱动
+        // 面向对象
+        new Vue({
+            el: "#demo",
+            data: {
+                name: "lemon",
+                num:1,
+                css:"p{color:red}",
+            }
+        })
+    </script>
+</body>
+
+</html>

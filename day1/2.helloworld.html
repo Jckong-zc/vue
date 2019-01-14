@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- View -->
+    <div id="demo">
+        <p>{{name}}</p>
+        <p :id="name">{{num}}</p>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        // $ jQuery
+        // Vue
+        // 构造函数默认首字母大写
+        console.log(Vue)
+        new Vue({
+            // 放选项
+            el: "#demo", // Element 获取节点  vue的作用域  View = document.querySelector("#demo") = Model
+            data: {
+                // 所有的基本数据类型
+                // Model
+                name: "lemon",
+                num:1
+            }
+        })
+        // View=Element(Model)
+    </script>
+</body>
+
+</html>
