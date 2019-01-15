@@ -1,3 +1,4 @@
+
 Vue.component("Xcontent", {
     template: `
         <content id="pageletListContent" class="feed-list-container">
