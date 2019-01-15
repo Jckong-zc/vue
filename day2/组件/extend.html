@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script src="../../js/vue.js"></script>
+    <script>
+        // 定义
+        const Xheader = Vue.extend({
+            data() {
+                return {
+                    title: "头部组件"
+                }
+            },
+            template: `
+                <div>
+                    <p v-text="title"></p>
+                </div>
+            `
+        })
+        // 全局注册
+        // Vue.component("Xheader", Xheader)
+
+        // Root组件
+        new Vue({
+            el: "#demo",
+            data: {
+                name: "lemon"
+            },
+            // template只能有一个父节点
+            template: `
+                <div>
+                    <p>{{name}}</p>
+                    <Xheader></Xheader>
+                    <Xheader></Xheader>
+                    <Xheader></Xheader>
+                    <Xheader></Xheader>
+                    <Xheader></Xheader>
+                </div>
+            `,
+            components:{
+                Xheader
+            }
+        })
+
+        // Vue.component其实等价于new Vue
+        // 没有见过的标签 就是 自定义标签 就是 组件
+        // 优势在于分开管理和重复利用
+        // 甩锅和偷懒
+    </script>
+</body>
+
+</html>
