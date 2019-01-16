@@ -12,13 +12,13 @@ import Xfooter from './components/Xfooter/Xfooter.js'
 new Vue({
     el: "#demo",
     data: {
-        name: "lemon"
+        bool: "true"
     },
     // <div>hello world</div>
     // 虚拟DOM和JSX
     template: `
         <div>
-            <Xheader></Xheader>
+            <Xheader v-if="bool"></Xheader>
             <Banner></Banner>
             <Xfooter></Xfooter>
         </div>
