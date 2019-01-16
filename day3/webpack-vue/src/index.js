@@ -7,6 +7,7 @@ import './styles/product.css'
 import Xheader from './components/Xheader/Xheader.js'
 import Banner from './components/Banner/Banner.js'
 import Xfooter from './components/Xfooter/Xfooter.js'
+import Player from './components/Player/Player.js'
 // 模块化 》组件化
 // 组件的本质就是自定义标签，而自定义标签的来源，就是一个独特的模块输出的结果
 new Vue({
@@ -21,6 +22,7 @@ new Vue({
             <Xheader v-if="bool"></Xheader>
             <Banner></Banner>
             <Xfooter></Xfooter>
+            <Player></Player>
         </div>
     `
     // render(createElement) {
