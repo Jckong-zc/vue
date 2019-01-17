@@ -18,6 +18,8 @@ export default {
     Xheader,
     Xsearch,
     Xpanel
+  },
+  destroyed() {
   }
 }
 </script>

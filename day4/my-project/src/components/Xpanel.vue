@@ -2,7 +2,7 @@
   <!-- View -->
   <div class="weui-panel weui-panel_access">
     <div class="weui-panel__bd">
-      <a
+      <router-link :to="`/detail/${index}/${'lemon'}`"
         v-for="(n,index) in news"
         :key="index"
         href="javascript:void(0);"
@@ -15,7 +15,7 @@
           <h4 class="weui-media-box__title" v-text="n.title"></h4>
           <p class="weui-media-box__desc" v-text="n.keywords"></p>
         </div>
-      </a>
+      </router-link>
     </div>
     <div class="weui-panel__ft">
       <a @click="getNews" href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
