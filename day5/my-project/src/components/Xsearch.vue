@@ -9,7 +9,7 @@
     <form class="weui-search-bar__form">
       <div class="weui-search-bar__box">
         <i class="weui-icon-search"></i>
-        <input ref="searchInput"
+        <input v-model="searchInput" ref="searchInput"
           type="search"
           class="weui-search-bar__input"
           id="searchInput"
@@ -37,10 +37,13 @@
   </div>
 </template>
 <script>
+import observer from '../libs/observer.js'
 export default {
   data() {
     return {
-      isShowSeachBar: false
+      isShowSeachBar: false,
+      // 搜索框的值
+      searchInput:""
     };
   },
   methods: {
@@ -48,6 +51,13 @@ export default {
       this.$refs.searchInput.focus()
       // 取反
       this.isShowSeachBar = !this.isShowSeachBar;
+    }
+  },
+  watch: {
+    searchInput(){
+      // 发布事件
+      observer.emit('search',this.searchInput)
+      location.href = `${location.href}?searchInput=${this.searchInput}`
     }
   }
 };

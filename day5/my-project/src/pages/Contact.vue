@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Xheader />
+        <Xheader name="联系人" skill="js" />
     </div>
 </template>
 <script>

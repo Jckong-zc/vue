@@ -31,10 +31,15 @@ const store = new Vuex.Store({
             moduleA,
             moduleB
         },
+        // loading
+        loadingStatus: false,
+        // 预览图状态
         // 图片的地址
         galleryImgUrl: "",
         // 预览图组件的状态值
-        galleryStatus: false
+        galleryStatus: false,
+        // 新闻的ID
+        newsId: 0,
     },
     // 修改数据的方法 真正改数据的操作
     mutations: {
@@ -49,6 +54,12 @@ const store = new Vuex.Store({
         editGallery(state, obj) {
             state.galleryImgUrl = obj.galleryImgUrl
             state.galleryStatus = obj.galleryStatus
+        },
+        editLoding(state, bool) {
+            state.loadingStatus = bool
+        },
+        editNewsId(state, id) {
+            state.newsId = id
         }
     },
     // 获取数据的方法
@@ -65,8 +76,13 @@ const store = new Vuex.Store({
                 galleryImgUrl: state.galleryImgUrl,
                 galleryStatus: state.galleryStatus
             }
-        }
+        },
+        getLoding(state) {
+            return state.loadingStatus
+        },
     },
+    // 异步的方法放这里
+    // 触发多个数据的改变才使用
     // 触发mutations，其实就是把刚才commit从组件放出来，换个地方放到actions
     actions: {
         setAuthor(context, data) {
@@ -74,9 +90,12 @@ const store = new Vuex.Store({
             // context.commit('editCount')
         },
         setGallery(context, obj) {
-            context.commit('editGallery', obj)
+            setTimeout(() => {
+                context.commit('editGallery', obj)
+            }, 1000)
         }
     }
 })
 // 暴露store仓库到`main.js`的根容器里面
+// console.log(Vuex,store)
 export default store

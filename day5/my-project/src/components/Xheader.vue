@@ -1,8 +1,13 @@
 <template>
-  <header @click="editAuthor" v-text="title"></header>
+  <!-- <header @click="editAuthor" v-text="title"></header> -->
+  <header @click="editAuthor" v-text="name"></header>
 </template>
 <script>
+import { mapActions, mapState } from "vuex";
+console.log();
 export default {
+  // 获取父组件传过来的属性值，让子组件呈现对应的状态
+  props:['name','skill'],
   data() {
     return {
       // title: "今日头条"
@@ -15,14 +20,17 @@ export default {
       // 直接触发mutations
       // this.$store.commit('editAuthor','laotian')
       // 直接触发action 间接触发mutations
-      this.$store.dispatch('setAuthor','laotian')
+      this.$store.dispatch("setAuthor", "laotian");
     }
   },
   computed: {
     // 从仓库里面去取值
-    title(){
-      return this.$store.getters.getAuthor
-    }
+    title() {
+      return this.$store.getters.getAuthor;
+    },
+    ...mapState({
+      author: state => state.author,
+    })
   },
   watch: {},
   beforeCreate() {
@@ -33,9 +41,7 @@ export default {
     console.log(this.$store.getters.getAuthor);
   },
   created() {},
-  mounted(){
-    
-  }
+  mounted() {}
 };
 </script>
 <style scoped>

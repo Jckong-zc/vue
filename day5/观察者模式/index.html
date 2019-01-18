@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发布订阅模式，观察者模式</title>
+</head>
+
+<body>
+    <!-- 点击按钮这个人 主动主观 -->
+    <!-- 去会所的客户 发布者 需求 自由 随心所欲 -->
+    <button>OK</button>
+    <script>
+        // 监听者  是存着数据  存着多个回调函数
+        // addEventListener('click',(e)=>{})
+        // $("button").on("click",()=>{}) //订阅者被动 会所里面的技师 订阅者 守护者 陪伴 等候
+        // onClick(()=>{})
+
+
+        class Observer {
+            constructor() {
+                // 空的队列
+                // 事件队列，发布者和订阅者的供需关系来去决定去向
+                this.list = {
+                    // 'eat':[()=>{
+                    //     console.log('eat')
+                    // }]
+                }
+            }
+            // 监听 订阅者
+            on(key, fn) {
+                if (!this.list[key]) {
+                    this.list[key] = [];
+                }
+                this.list[key].push(fn);
+            }
+            // 触发 发布者
+            emit(key,params) {
+                // 把所有存着回调函数的数组给取出来
+                let fns = this.list[key];
+                // 如果数组队列为空，则返回
+                if (!fns || fns.length === 0) {
+                    return false;
+                }
+                // 如果不为空，我就遍历所有的函数执行
+                fns.forEach(fn => {
+                    fn(params);
+                });
+            }
+        }
+        // 事件总线
+        var obs = new Observer();
+        // 就是把函数给保存起来
+
+        // 订阅者 监听者一般是监听一次 因为他很忠诚
+        // 存着一套技能
+        obs.on('eat', () => {
+            console.log('eat1')
+        })
+        obs.on('click', (data) => {
+            console.log(data)
+        })
+        // 发布者 一般是很花心 因为她比较浪
+        // 触发订阅者技能
+        obs.emit('click','hello world')
+        obs.emit('click','abc')
+        console.log(obs)
+    </script>
+</body>
+
+</html>
