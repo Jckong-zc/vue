@@ -23,3 +23,54 @@ http://qt.qq.com/php_cgi/news/php/varcache_getnews.php?id=13&page=0&plat=ios&ver
 - webpack(requirejs),gulp
 - node
 - 服务器搭建，上线
+
+
+邱癸坚JiekeQiu
+司马朝勇 simachaoyong
+钟群 hi5388169
+wlf520wyh 吴林峰
+liuchenlin157 刘陈林
+tanweijia 谭韦佳
+刘利涛 935488891
+邹思明    s-Ming
+林梓濠    624205079
+杨锰照 YMengZhao
+汤文辉 tommy-it
+江超仪 924276356
+李荣生 LRS1
+Jckong-zc 孔志聪 
+LanHaiHeHe  蓝海和
+李林  lldegithub
+katsukichan 江俊隆
+wolongke 吴龙科
+dashboard.html 陈裕
+张志华 zhangzhihua6
+黄荣伟 huangrongwei
+卢嘉俊 Lujiajun123
+李志合 BruceLee008
+陈瑞敏 raymichan
+邓伟良 dddwl
+fangira 何梓维
+441520249 刘志健
+2955988587  冯波
+Thesnakeshe  佘佳玲
+misiteli  李思远
+SoulHall 徐明贵
+781499682ll 廖德强
+zhangweixing1 张为醒
+lamlily 林莉
+2955988587  冯波
+HuangGuiJin 刘少宁
+vvcxxc ???
+pickmexiexie 谢卓新
+罗东伟 evis-lo
+谢建满 maman666
+Mrsandman0 龚爱强
+WTBIN 吴同
+陈鸿 Chh19970113
+wangqiankuno 王乾坤
+陈飞鑫 chenfeixin
+ChenYu1127547384 陈裕
+卢进球 Lujinqiu (Vue的项目是猫眼电影)
+欧积莹 GiGi-Ou
+wendashi 韦靖

@@ -31,8 +31,14 @@
 </template>
 
 <script>
+let a = 1;
 export default {
   name: 'HelloWorld',
+  data(){
+    return {
+      b:2
+    }
+  },
   props: {
     msg: String
   }

@@ -32,9 +32,11 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted() {
+    this.name = "lemon"
   }
 }
 </script>
