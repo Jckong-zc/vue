@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        <div v-for='i in imgs'>
+            <img @load="imgFinish" :src="i" />
+        </div>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#demo",
+            data: {
+                imgs:[
+                    'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2865672302,4153895132&fm=200&gp=0.jpg',
+                    'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2293931205,3236020402&fm=200&gp=0.jpg',
+                    'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1797149888,4050812472&fm=27&gp=0.jpg'
+                ]
+            },
+            methods:{
+                imgFinish(e){
+                    console.log(e.target.parentNode.offsetHeight)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
